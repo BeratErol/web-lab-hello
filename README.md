@@ -1,4 +1,4 @@
-# Web LAB-1, Web LAB-2 – Semantic Portfolio Project
+# Web LAB-1 ~ Web LAB-2 – Semantic Portfolio Project
 
 
 ## 📌 Proje Hakkında
@@ -73,7 +73,3 @@ Bu projede aşağıdaki Git adımları uygulanmıştır:
 - Commit geçmişi korunmuştur.
 
 ---
-
-## 📜 Lisans
-
-Bu proje eğitim amaçlı geliştirilmiştir.
