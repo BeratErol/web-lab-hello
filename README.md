@@ -1,19 +1,79 @@
-# Web LAB-1 - Hello Project
+# Web LAB-1, Web LAB-2 – Semantic Portfolio Project
 
-## Hakkinda
-Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda  
-Vite + React + TypeScript kullanilarak olusturulmustur.
 
-## Gelistirici
-- **Ad Soyad:** Berat Erol
-- **Ogrenci No:** 235541010
+## 📌 Proje Hakkında
 
-## Kullanilan Teknolojiler
+Bu proje, Web Tasarımı ve Programlama dersi kapsamında geliştirilmiştir.  
+Vite + React + TypeScript kullanılarak semantik HTML yapısına uygun, erişilebilir ve responsive bir kişisel portföy uygulaması oluşturulmuştur.
+
+---
+
+## 👨‍💻 Geliştirici
+
+- **Ad Soyad:** Berat Erol  
+- **Öğrenci No:** 235541010  
+
+---
+
+## 🚀 Proje Özellikleri
+
+- Semantic HTML5 yapısı kullanılmıştır.
+- Erişilebilir (accessible) iletişim formu eklenmiştir.
+- Responsive tasarım uygulanmıştır.
+- Modern mavi tonlu tema kullanılmıştır.
+- Profil fotoğrafı entegrasyonu yapılmıştır.
+- Lighthouse performans analizi gerçekleştirilmiştir.
+- Git workflow (feature branch + pull request + merge) uygulanmıştır.
+
+---
+
+## 🛠 Kullanılan Teknolojiler
+
 - React 18
 - TypeScript
 - Vite
+- CSS3
 
-## Kurulum
+---
+
+## 📊 Lighthouse Raporu
+
+Proje için Lighthouse analizi yapılmıştır.  
+Rapor ekran görüntüsü proje dizininde bulunmaktadır:
+
+`lighthouse-report.png`
+
+---
+
+## ⚙️ Kurulum
+
+Projeyi lokal ortamda çalıştırmak için:
 
 ```bash
 npm install
+npm run dev
+```
+
+Uygulama varsayılan olarak şu adreste çalışır:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📂 Git Workflow Süreci
+
+Bu projede aşağıdaki Git adımları uygulanmıştır:
+
+- Feature branch oluşturulmuştur.
+- Birden fazla anlamlı commit atılmıştır.
+- Pull Request açılmıştır.
+- Merge işlemi gerçekleştirilmiştir.
+- Commit geçmişi korunmuştur.
+
+---
+
+## 📜 Lisans
+
+Bu proje eğitim amaçlı geliştirilmiştir.
