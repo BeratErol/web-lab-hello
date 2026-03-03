@@ -1,75 +1,17 @@
-# Web LAB-1 ~ Web LAB-2 – Semantic Portfolio Project
+# 📱 Modern Responsive Tasarım Sistemi
 
+Bu branch, portföy sayfasının farklı ekran boyutlarına (Mobil, Tablet, Masaüstü) kusursuz uyum sağlaması için modern CSS teknikleri ile güncellendiği bölümdür.
 
-## 📌 Proje Hakkında
+## 🚀 Teknik Stratejiler
+* **Mobile-First Yaklaşımı:** Tasarım süreci en küçük ekranlardan başlayıp `min-width` medya sorguları ile genişletildi.
+* **Tasarım Sistemi (Design Tokens):** Renk paleti, boşluk skalası (spacing), border-radius ve gölgeler `:root` üzerinden CSS değişkenleri (`var(--...)`) ile merkezi yönetime geçirildi.
+* **Fluid Typography:** `clamp()` fonksiyonu kullanılarak, sabit piksel değerleri yerine ekran genişliğine göre akıcı şekilde ölçeklenen metin yapısı kuruldu.
+* **Layout Sistemleri:**
+    * **Flexbox:** Navigasyon ve hizalama işlemlerinde tek boyutlu esnek düzen.
+    * **CSS Grid:** Proje kartlarının `auto-fit` ve `minmax` özellikleri ile medya sorgusu gerektirmeyen, otomatik responsive ızgara düzeni.
+* **Görsel Yönetimi:** `max-width: 100%` ve `object-fit: cover` kullanımı ile görsellerin duyarlı hale getirilmesi.
 
-Bu proje, Web Tasarımı ve Programlama dersi kapsamında geliştirilmiştir.  
-Vite + React + TypeScript kullanılarak semantik HTML yapısına uygun, erişilebilir ve responsive bir kişisel portföy uygulaması oluşturulmuştur.
-
----
-
-## 👨‍💻 Geliştirici
-
-- **Ad Soyad:** Berat Erol  
-- **Öğrenci No:** 235541010  
-
----
-
-## 🚀 Proje Özellikleri
-
-- Semantic HTML5 yapısı kullanılmıştır.
-- Erişilebilir (accessible) iletişim formu eklenmiştir.
-- Responsive tasarım uygulanmıştır.
-- Modern mavi tonlu tema kullanılmıştır.
-- Profil fotoğrafı entegrasyonu yapılmıştır.
-- Lighthouse performans analizi gerçekleştirilmiştir.
-- Git workflow (feature branch + pull request + merge) uygulanmıştır.
-
----
-
-## 🛠 Kullanılan Teknolojiler
-
-- React 18
-- TypeScript
-- Vite
-- CSS3
-
----
-
-## 📊 Lighthouse Raporu
-
-Proje için Lighthouse analizi yapılmıştır.  
-Rapor ekran görüntüsü proje dizininde bulunmaktadır:
-
-`lighthouse-report.png`
-
----
-
-## ⚙️ Kurulum
-
-Projeyi lokal ortamda çalıştırmak için:
-
-```bash
-npm install
-npm run dev
-```
-
-Uygulama varsayılan olarak şu adreste çalışır:
-
-```
-http://localhost:5173
-```
-
----
-
-## 📂 Git Workflow Süreci
-
-Bu projede aşağıdaki Git adımları uygulanmıştır:
-
-- Feature branch oluşturulmuştur.
-- Birden fazla anlamlı commit atılmıştır.
-- Pull Request açılmıştır.
-- Merge işlemi gerçekleştirilmiştir.
-- Commit geçmişi korunmuştur.
-
----
+## 📈 Breakpoint'ler
+* **Mobil:** 0 - 639px
+* **Tablet:** 640px - 1023px
+* **Masaüstü:** 1024px+
