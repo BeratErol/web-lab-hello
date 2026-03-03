@@ -1,16 +1,127 @@
-body {
+* {
   margin: 0;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-div {
-  background-color: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: #f3f6fb;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+/* HEADER FULL WIDTH */
+.header {
+  width: 100%;
+  background-color: #1e3a8a;
+}
+
+.nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ANA İÇERİK ORTALI */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;  
+  text-align: center;
+}
+
+/* BAŞLIKLAR */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 2rem 0 1rem 0;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* PROJE KARTLARI */
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  max-width: 700px;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Focus */
+:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  text-align: center;
 }
