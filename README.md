@@ -1,19 +1,15 @@
-# Web LAB-1 - Hello Project
+# 🏗️ Semantik Portföy Yapısı
 
-## Hakkinda
-Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda  
-Vite + React + TypeScript kullanilarak olusturulmustur.
+Bu branch, kişisel portföyümün temelini oluşturan **HTML5** iskelet yapısını içermektedir.
 
-## Gelistirici
-- **Ad Soyad:** Berat Erol
-- **Ogrenci No:** 235541010
+## 🎯 Hedef
+* Sayfanın arama motorları tarafından kolayca anlaşılması (SEO).
+* Erişilebilirlik (Accessibility) standartlarına %100 uyum.
 
-## Kullanilan Teknolojiler
-- React 18
-- TypeScript
-- Vite
+## 🛠️ Teknik Detaylar
+* **Semantik Etiketler:** İçerik, `<header>`, `<nav>`, `<section>`, `<article>` ve `<footer>` gibi anlamlı etiketlerle bölümlendi.
+* **Erişilebilirlik:** Görsel etiketleri için `alt` açıklamaları ve navigasyon için `aria-label` tanımlamaları eklendi.
+* **Yapı:** İçerik hiyerarşisi, ekran okuyucular ve tarayıcılar için optimize edildi.
 
-## Kurulum
-
-```bash
-npm install
+---
+*Geliştirme: Berat Erol - 235541010*
