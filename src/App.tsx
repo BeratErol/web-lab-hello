@@ -8,14 +8,16 @@ function App() {
       </a>
 
       <header className="header">
-        <nav aria-label="Ana navigasyon" className="nav">
-          <ul>
-            <li><a href="#hakkimda">Hakkımda</a></li>
-            <li><a href="#projeler">Projeler</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
-          </ul>
-        </nav>
-      </header>
+  <h1 className="site-title">Berat Erol</h1>
+
+  <nav aria-label="Ana navigasyon" className="nav">
+    <ul>
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+</header> 
 
       <main id="main-content" className="container">
         <h1>Kişisel Portföy</h1>
@@ -36,36 +38,47 @@ function App() {
             Yazılım Mühendisliği öğrencisiyim. C#/.NET ve Java backend
             sistemleri üzerine çalışıyorum.
           </p>
+
+          <ul className="skill-tags" role="list" aria-label="Beceri etiketleri">
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>TypeScript</li>
+  <li>Git</li>
+</ul>
         </section>
 
         <section id="projeler">
-          <h2>Projelerim</h2>
+  <h2>Projelerim</h2>
 
-          <div className="project-card">
-            <h3>C#/.NET Desktop & Backend Projeleri</h3>
-            <p>
-              Masaüstü uygulamaları, katmanlı mimari tasarımları ve
-              backend servisleri geliştirdim. OOP prensipleri ve
-              modüler yapı odaklı projeler.
-            </p>
-          </div>
+  <div className="project-grid">
 
-          <div className="project-card">
-            <h3>Java Algoritma & Uygulamaları</h3>
-            <p>
-              120+ temel algoritma implementasyonu, Swing tabanlı
-              Kütüphane Yönetim Sistemi ve recursive grid oyun motorları.
-            </p>
-          </div>
+    <article className="project-card">
+      <h3>C#/.NET Desktop & Backend Projeleri</h3>
+      <p>
+        Masaüstü uygulamaları, katmanlı mimari tasarımları ve
+        backend servisleri geliştirdim.
+      </p>
+    </article>
 
-          <div className="project-card">
-            <h3>BookVerse System</h3>
-            <p>
-              Monolit mimariden mikroservis mimarisine geçiş simülasyonu.
-              Docker ve AWS dağıtım senaryoları içermektedir.
-            </p>
-          </div>
-        </section>
+    <article className="project-card">
+      <h3>Java Algoritma & Uygulamaları</h3>
+      <p>
+        120+ temel algoritma implementasyonu ve Swing tabanlı
+        sistem geliştirdim.
+      </p>
+    </article>
+
+    <article className="project-card">
+      <h3>BookVerse System</h3>
+      <p>
+        Monolit mimariden mikroservis mimarisine geçiş simülasyonu.
+      </p>
+    </article>
+
+  </div>
+</section>
       </main>
 
       <footer>

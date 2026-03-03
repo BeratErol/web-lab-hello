@@ -1,0 +1,41 @@
+:root {
+
+  /* ===== COLOR SYSTEM ===== */
+  --color-primary: #2563eb;
+  --color-secondary: #1e40af;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-sans: system-ui, -apple-system, sans-serif;
+
+  --text-sm: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.3vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.4vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.7vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.5rem + 1vw, 2.25rem);
+
+  /* ===== SPACING SCALE ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ===== RADIUS ===== */
+  --radius-md: 0.5rem;
+  --radius-full: 999px;
+
+  /* ===== SHADOW ===== */
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+
+  /* ===== TRANSITION ===== */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
