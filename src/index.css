@@ -186,3 +186,141 @@ nav a:focus {
   color: var(--color-muted);
   flex-grow: 1; /* alt kenar hizalama */
 }
+
+/* ========================================
+   MOBIL (0-639px)
+======================================== */
+
+/* Section arasi bosluk */
+section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* Section basliklari */
+section h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* ===== HAKKIMDA ===== */
+#hakkimda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+#hakkimda figure {
+  max-width: 200px;
+}
+
+#hakkimda img {
+  border-radius: var(--radius-full);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary);
+  outline-offset: 2px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: var(--color-secondary);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+/* ========================================
+   TABLET (640px ve uzeri)
+======================================== */
+@media (min-width: 640px) {
+
+  section {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  /* Hakkimda yatay olur */
+  #hakkimda {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #hakkimda figure {
+    flex-shrink: 0;
+  }
+
+  button[type="submit"] {
+    width: auto;
+  }
+}
+
+/* ========================================
+   MASAUSTU (1024px ve uzeri)
+======================================== */
+@media (min-width: 1024px) {
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  /* Proje kartlari en az 3 sutun */
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
