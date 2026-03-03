@@ -1,19 +1,13 @@
-# Web LAB-1 - Hello Project
+# 🎨 UI / UX Özelleştirmeleri
 
-## Hakkinda
-Bu proje, Web Tasarimi ve Programlama dersi LAB-1 kapsaminda  
-Vite + React + TypeScript kullanilarak olusturulmustur.
+Bu branch, projenin görsel arayüzünün oluşturulması ve React/TypeScript ekosistemine giriş sürecini temsil eder.
 
-## Gelistirici
-- **Ad Soyad:** Berat Erol
-- **Ogrenci No:** 235541010
+## ✨ Öne Çıkanlar
+* **Teknoloji Yığını:** Vite, React ve TypeScript kullanılarak modern ve tip güvenli (type-safe) bir web projesi inşa edildi.
+* **Arayüz Tasarımı:** Kişisel marka kimliğini yansıtan özgün stil tanımlamaları (`CSS`) yapıldı.
+* **Bileşen Yapısı:** Arayüz, React bileşenleri (Components) mantığıyla modüler bir şekilde tasarlandı.
+* **UX İyileştirmeleri:** Kullanıcı etkileşimini artırmak adına hover efektleri, geçişler (transitions) ve tutarlı tipografi kullanımı uygulandı.
 
-## Kullanilan Teknolojiler
-- React 18
-- TypeScript
-- Vite
-
-## Kurulum
-
-```bash
-npm install
+## 📐 Tasarım İlkeleri
+* **Modülerlik:** Kodun küçük, bağımsız ve yeniden kullanılabilir parçalara ayrılması.
+* **Okunabilirlik:** Kullanıcı deneyimini iyileştiren hiyerarşik ve estetik bir arayüz düzeni.
