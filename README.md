@@ -1,3 +1,4 @@
+
 ---
 
 # Web LAB-1 ~ LAB-2 ~ LAB-3 – Semantic & Responsive Portfolio Project
@@ -115,3 +116,4 @@ Bu projede aşağıdaki Git adımları uygulanmıştır:
 * Commit geçmişi korunarak ilerleme sağlandı.
 
 ---
+
