@@ -8,14 +8,16 @@ function App() {
       </a>
 
       <header className="header">
-        <nav aria-label="Ana navigasyon" className="nav">
-          <ul>
-            <li><a href="#hakkimda">Hakkımda</a></li>
-            <li><a href="#projeler">Projeler</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
-          </ul>
-        </nav>
-      </header>
+  <h1 className="site-title">Berat Erol</h1>
+
+  <nav aria-label="Ana navigasyon" className="nav">
+    <ul>
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#projeler">Projeler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+</header> 
 
       <main id="main-content" className="container">
         <h1>Kişisel Portföy</h1>
