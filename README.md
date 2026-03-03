@@ -1,15 +1,15 @@
-# 🏗️ Semantik Portföy Yapısı
+# 🏗️ Semantik Portföy İskeleti
 
-Bu branch, kişisel portföyümün temelini oluşturan **HTML5** iskelet yapısını içermektedir.
+Bu branch, kişisel portföyümün temelini oluşturan **HTML5** iskelet yapısını ve **erişilebilirlik (A11y)** standartlarını kapsar.
 
-## 🎯 Hedef
-* Sayfanın arama motorları tarafından kolayca anlaşılması (SEO).
-* Erişilebilirlik (Accessibility) standartlarına %100 uyum.
+## 🎯 Kazanımlar
+* **Semantik Yapı:** Sayfa içeriği; `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` ve `<footer>` etiketleri kullanılarak anlamlı bir hiyerarşiyle yapılandırıldı.
+* **Erişilebilirlik (A11y):** * `<h1>` - `<h6>` hiyerarşisi, ekran okuyucular için optimize edildi.
+    * Görsellerde anlamlı `alt` metinleri ve dekoratif görsellerde `alt=""` kullanımı uygulandı.
+    * `role="alert"` ve `aria-describedby` gibi ARIA öznitelikleri ile form hata yönetimi güçlendirildi.
+* **Form Mimarisi:** İletişim formu, `<label>` ilişkisi (for/id) kurularak erişilebilir hale getirildi ve HTML5 doğrulama öznitelikleri (`required`, `minlength`) ile desteklendi.
+* **Navigasyon:** Klavye kullanıcıları için "Ana içeriğe atla" (skip link) özelliği eklendi.
 
-## 🛠️ Teknik Detaylar
-* **Semantik Etiketler:** İçerik, `<header>`, `<nav>`, `<section>`, `<article>` ve `<footer>` gibi anlamlı etiketlerle bölümlendi.
-* **Erişilebilirlik:** Görsel etiketleri için `alt` açıklamaları ve navigasyon için `aria-label` tanımlamaları eklendi.
-* **Yapı:** İçerik hiyerarşisi, ekran okuyucular ve tarayıcılar için optimize edildi.
-
----
-*Geliştirme: Berat Erol - 235541010*
+## 🛠️ Teknik Araçlar
+* **HTML5:** Semantik etiketleme.
+* **Lighthouse:** Erişilebilirlik puanının 90+ seviyesine çıkarılması için denetim.
