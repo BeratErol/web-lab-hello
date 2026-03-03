@@ -50,33 +50,35 @@ function App() {
         </section>
 
         <section id="projeler">
-          <h2>Projelerim</h2>
+  <h2>Projelerim</h2>
 
-          <div className="project-card">
-            <h3>C#/.NET Desktop & Backend Projeleri</h3>
-            <p>
-              Masaüstü uygulamaları, katmanlı mimari tasarımları ve
-              backend servisleri geliştirdim. OOP prensipleri ve
-              modüler yapı odaklı projeler.
-            </p>
-          </div>
+  <div className="project-grid">
 
-          <div className="project-card">
-            <h3>Java Algoritma & Uygulamaları</h3>
-            <p>
-              120+ temel algoritma implementasyonu, Swing tabanlı
-              Kütüphane Yönetim Sistemi ve recursive grid oyun motorları.
-            </p>
-          </div>
+    <article className="project-card">
+      <h3>C#/.NET Desktop & Backend Projeleri</h3>
+      <p>
+        Masaüstü uygulamaları, katmanlı mimari tasarımları ve
+        backend servisleri geliştirdim.
+      </p>
+    </article>
 
-          <div className="project-card">
-            <h3>BookVerse System</h3>
-            <p>
-              Monolit mimariden mikroservis mimarisine geçiş simülasyonu.
-              Docker ve AWS dağıtım senaryoları içermektedir.
-            </p>
-          </div>
-        </section>
+    <article className="project-card">
+      <h3>Java Algoritma & Uygulamaları</h3>
+      <p>
+        120+ temel algoritma implementasyonu ve Swing tabanlı
+        sistem geliştirdim.
+      </p>
+    </article>
+
+    <article className="project-card">
+      <h3>BookVerse System</h3>
+      <p>
+        Monolit mimariden mikroservis mimarisine geçiş simülasyonu.
+      </p>
+    </article>
+
+  </div>
+</section>
       </main>
 
       <footer>
