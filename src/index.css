@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #1E3A8A;
+  --color-secondary: #2563EB;
+  /* Diğer tokenlarını buraya ekle */
+}
+
+/* Föydeki 351. satırda belirtilen varyant */
+@custom-variant dark (&:where(.dark, .dark *));

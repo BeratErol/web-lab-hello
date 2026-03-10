@@ -15,11 +15,12 @@ export default function Card({
   imageAlt = "", 
   variant = "elevated" 
 }) {
-  const variants = {
-    elevated: "bg-white dark:bg-gray-800 shadow-md hover:shadow-lg",
-    outlined: "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700",
-    filled: "bg-gray-100 dark:bg-gray-800"
-  };
+  // Card varyantlarını föydeki gibi güncelle
+const variants = {
+  elevated: "bg-white dark:bg-gray-800 shadow-md hover:shadow-lg",
+  outlined: "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700",
+  filled: "bg-gray-100 dark:bg-gray-800",
+};
 
   return (
     <div className={`rounded-xl overflow-hidden transition-shadow ${variants[variant]}`}>
