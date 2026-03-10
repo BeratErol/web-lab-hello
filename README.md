@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 🌐 Web Tasarımı ve Programlama – Laboratuvar Portföyü
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bu depo, Web Tasarımı ve Programlama dersi kapsamında geliştirilen laboratuvar çalışmalarını içermektedir. Proje, modern web teknolojileri olan **Vite, React ve TypeScript** kullanılarak geliştirilmiştir.
 
-## React Compiler
+## 👨‍💻 Geliştirici
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Ad Soyad:** Berat Erol
+* **Öğrenci No:** 235541010
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Proje Yapısı ve İş Akışı
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ders gereklilikleri doğrultusunda bu projede **Pull Request (PR) veya Merge işlemi uygulanmamıştır.** Her laboratuvar çalışması, kendi izole edilmiş `feature/` branch'inde (dalında) geliştirilmiştir. Bu sayede her haftanın çalışması, diğer haftaların kodlarından bağımsız ve temiz kalmıştır.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🧪 Laboratuvar Dalları (Branch'ler)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Haftalık geliştirmeleri incelemek için aşağıdaki dallara göz atabilirsiniz:
+
+* `feature/semantic-portfolio`: **LAB-1** – Semantik HTML yapısının kurulması ve proje altyapısının oluşturulması.
+* `feature/personalize-ui`: **LAB-2** – Kullanıcı arayüzünün kişiselleştirilmesi ve erişilebilir (A11y) form yapısının entegrasyonu.
+* `feature/responsive-layout`: **LAB-3** – Mobile-first yaklaşımı, CSS Grid/Flexbox ve fluid tipografi ile responsive tasarım.
+
+---
+
+## 🛠 Kullanılan Teknolojiler
+
+* **React 18** (Bileşen tabanlı mimari)
+* **TypeScript** (Tip güvenliği)
+* **Vite** (Hızlı geliştirme ve derleme ortamı)
+* **CSS3** (Modern tasarım ve layout sistemleri)
+
+## ⚙️ Kurulum ve Çalıştırma
+
+Projeyi lokal ortamda çalıştırmak için aşağıdaki komutları kullanabilirsiniz:
+
+```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run dev
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Tarayıcınızda şu adresi açın: `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📋 Teslim Notu
+
+Bu repo, her laboratuvar haftasının kendi branch'inde bağımsız olarak geliştirildiği ve korunarak izole edildiği bir çalışma düzeniyle yapılandırılmıştır. Tüm çalışmalar ilgili branch'lerde en güncel ve izole halleriyle incelenebilir.
+
+---
