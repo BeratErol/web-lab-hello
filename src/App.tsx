@@ -1,6 +1,7 @@
 import Button from './components/Button';
 import Card from './components/Card';
 import UIKit from './UIKit';
+import ContactForm from './components/ContactForm'; // Formu ekledik
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         </Card>
       </div>
 
-      {/* 2. Projelerim Bölümü (Buraya ekledik) */}
+      {/* 2. Projelerim Bölümü */}
       <section id="projeler" className="py-16 px-4 w-full max-w-6xl">
         <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
           Projelerim
@@ -41,7 +42,12 @@ function App() {
         </div>
       </section>
 
-      {/* 3. UI Kit Vitrini */}
+      {/* 3. İletişim Formu */}
+      <section className="w-full max-w-4xl mt-10">
+        <ContactForm />
+      </section>
+
+      {/* 4. UI Kit Vitrini */}
       <div className="w-full max-w-4xl mt-10">
         <UIKit />
       </div>
@@ -50,4 +56,4 @@ function App() {
   )
 }
 
-export default App;
+export default App; 
