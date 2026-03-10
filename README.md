@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 🎨 Kişiselleştirilmiş UI ve Etkileşimli Formlar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bu branch, portföy arayüzünün görsel kimliğinin oluşturulması, kullanıcı etkileşimlerinin iyileştirilmesi ve erişilebilir form mimarisinin entegre edildiği geliştirme aşamasıdır.
 
-## React Compiler
+## 🎯 Kazanımlar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **UI Kişiselleştirme:** Projenin genel tema renkleri ve tipografik tercihleri, modern bir kullanıcı deneyimi (UX) sunacak şekilde yapılandırıldı.
+* **Gelişmiş Form Mimarisi:** İletişim formu, kullanıcı girdilerini doğrulayan (`required`, `minLength`) ve hata mesajlarını `aria-describedby` ile ekran okuyuculara bildiren erişilebilir bir yapıya kavuşturuldu.
+* **Etkileşim Tasarımı:** Form alanları üzerinde odaklanma (focus) ve tıklama (active) durumları için görsel geri bildirimler eklendi.
+* **Kullanıcı Deneyimi (UX):** Kullanıcının sayfaya ilk girişinde odaklanmayı kolaylaştıran "Ana içeriğe atla" (Skip Link) yapısı ve net bir görsel hiyerarşi oluşturuldu.
 
-## Expanding the ESLint configuration
+## 🛠 Teknik Araçlar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **React (JSX/TSX):** Bileşen bazlı yapı ile form elementlerinin modüler kullanımı.
+* **CSS3 (Modern Seçiciler):** `:focus`, `:required`, `:invalid` gibi sözde sınıflar (pseudo-classes) ile akıllı form yönetimi.
+* **Erişilebilirlik (A11y):** Form etiketleri (`label`), `fieldset`/`legend` kullanımı ve hata mesajları için `role="alert"` implementasyonu.
+* **Git İş Akışı:** Bu aşamada, kodun tarihçesini korumak adına atomik commit prensibi (feat, style, fix) uygulandı.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Uygulanan İyileştirmeler
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* [x] **Form Validasyonu:** Kullanıcı hata yaptığında veya eksik bilgi girdiğinde anlık geri bildirim mekanizmaları kuruldu.
+* [x] **Görsel Hiyerarşi:** Profil fotoğrafı ve tanıtım kartları için kapsayıcılar (`figure`, `figcaption`) düzenlenerek görsel bütünlük sağlandı.
+* [x] **Lighthouse Denetimi:** Uygulanan değişikliklerin ardından Accessibility (Erişilebilirlik) puanının 90+ seviyesinde korunması için testler gerçekleştirildi.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
