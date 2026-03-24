@@ -19,12 +19,14 @@ Ders gereklilikleri doğrultusunda bu projede her laboratuvar çalışması, ken
 * `feature/personalize-ui`: **LAB-2** – Kullanıcı arayüzünün kişiselleştirilmesi.
 * `feature/responsive-layout`: **LAB-3** – Mobile-first, Grid/Flexbox ve responsive tasarım.
 * `feature/tailwind-ui-kit`: **LAB-4** – Tailwind CSS v4 entegrasyonu, component mimarisi ve dark mode.
+* `feature/typescript-projects`: **LAB-5** – TypeScript entegrasyonu, Async/Fetch API ve State yönetimi.
 
 ---
 
 ## 🛠 Kullanılan Teknolojiler
 
 * **React 18** (Bileşen tabanlı mimari)
+* **TypeScript** (Tip güvenliği ve veri modelleme)
 * **Tailwind CSS v4** (Utility-first CSS yaklaşımı)
 * **Vite** (Hızlı geliştirme ve derleme ortamı)
 
