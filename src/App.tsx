@@ -1,81 +1,146 @@
-import Button from './components/Button';
-import Card from './components/Card';
-import UIKit from './UIKit';
-import ContactForm from './components/ContactForm';
+import { useState, useEffect } from "react";
+import type { Project, Category, SortField, SortOrder } from "./types/project";
+import { fetchProjects } from "./services/projectService";
+import { applyFilters } from "./utils/projectHelpers";
+import Card from "./components/Card";
+import Input from "./components/Input";
+import Button from "./components/Button";
+import Alert from "./components/Alert";
 
-// Projeleri bir dizi olarak tanımladık [cite: 1039-1045]
-const projeler = [
-  { id: 1, title: "E-Ticaret Sitesi", desc: "React ve Node.js kullanarak geliştirdiğim tam kapsamlı bir uygulama.", img: "proje1.jpg" },
-  { id: 2, title: "Arduino Smart Lock", desc: "Arduino ve sensörler ile güvenli geçiş sistemi.", img: "proje2.jpg" },
-  { id: 3, title: "Ankara Ulaşım", desc: "Ankara içi gerçek zamanlı ulaşım platformu (GIS).", img: "proje3.jpg" }
-];
+export default function App() {
+  // --- 1. DURUM (STATE) TANIMLARI ---
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState<Category | "all">("all");
+  const [sortField, setSortField] = useState<SortField>("year");
+  const [sortOrder, setSortOrder] = useState<SortOrder>("desc");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-function App() {
+  // --- 2. VERİ ÇEKME (FETCH) ---
+  useEffect(() => {
+    async function load() {
+      try {
+        setLoading(true);
+        setError(null);
+        const data = await fetchProjects();
+        setProjects(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Bilinmeyen bir hata oluştu");
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
+
+  // --- 3. TÜRETİLMİŞ VERİ (Filtreleme ve Sıralama) ---
+  const filtered = applyFilters(projects, search, category, sortField, sortOrder);
+  const categories: (Category | "all")[] = ["all", "frontend", "fullstack", "backend"];
+
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-6 flex flex-col items-center transition-colors">
-      
-      {/* Tema Değiştirici Buton [cite: 353-381] */}
-      <button 
-        onClick={() => document.documentElement.classList.toggle('dark')}
-        className="fixed top-4 right-4 z-50 bg-gray-200 dark:bg-gray-700 p-2 rounded-full shadow-lg transition-transform hover:scale-110"
-        aria-label="Tema değiştir"
-      >
-        <span className="dark:hidden">🌙</span>
-        <span className="hidden dark:inline">☀️</span>
-      </button>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-4 md:p-8 transition-colors">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          Yazılım Projelerim
+        </h1>
 
-      {/* 1. Profil Bilgileri - Detaylandırılmış  */}
-      <div className="max-w-xl w-full mb-10">
-        <Card title="Hakkımda" variant="elevated">
-          <div className="space-y-4">
-            <p className="text-gray-700 dark:text-gray-300">
-              Merhaba, ben Berat Erol. Fırat Üniversitesi Yazılım Mühendisliği 3. sınıf öğrencisiyim. 
-              Backend geliştirme, embedded sistemler ve siber güvenlik üzerine araştırmalar yapıyorum.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="bg-blue-800 text-white px-3 py-1 rounded-full text-xs">React</span>
-              <span className="bg-blue-800 text-white px-3 py-1 rounded-full text-xs">Python</span>
-              <span className="bg-blue-800 text-white px-3 py-1 rounded-full text-xs">Tailwind</span>
-            </div>
+        {/* HATA DURUMU */}
+        {error && (
+          <Alert variant="error" title="Sistemsel Hata">
+            {error}
+          </Alert>
+        )}
+
+        {/* FİLTRELEME VE ARAMA PANELİ */}
+        <div className="flex flex-col md:flex-row gap-4 mb-10 items-center justify-between bg-white dark:bg-gray-900 p-4 rounded-xl shadow-sm">
+          <div className="w-full md:w-1/3">
+            <Input
+              id="search"
+              placeholder="Proje veya teknoloji ara..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
-        </Card>
-      </div>
 
-      {/* 2. Projelerim Bölümü [cite: 1030-1057] */}
-      <section id="projeler" className="py-16 px-4 w-full max-w-6xl">
-        <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
-          Projelerim
-        </h2>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projeler.map((p) => (
-            <Card key={p.id} title={p.title} image={p.img} variant="elevated">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{p.desc}</p>
-              <Button 
-  variant="ghost" 
-  size="sm" 
-  className="mt-4"
-  onClick={() => alert("Proje detayları yakında eklenecek!")}
->
-  Detayları Gör
-</Button>
-            </Card>
-          ))}
+          <div className="flex gap-2 flex-wrap justify-center">
+            {categories.map((cat) => (
+              <Button
+                key={cat}
+                variant={category === cat ? "primary" : "ghost"}
+                size="sm"
+                onClick={() => setCategory(cat)}
+              >
+                {cat === "all" ? "Tümü" : cat.toUpperCase()}
+              </Button>
+            ))}
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <select
+              value={sortField}
+              onChange={(e) => setSortField(e.target.value as SortField)}
+              className="border rounded-lg px-3 py-2 text-sm dark:bg-gray-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="year">Yıla Göre</option>
+              <option value="title">Başlığa Göre</option>
+            </select>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setSortOrder(prev => (prev === "asc" ? "desc" : "asc"))}
+            >
+              {sortOrder === "asc" ? "↑ A-Z" : "↓ Z-A"}
+            </Button>
+          </div>
         </div>
-      </section>
 
-      {/* 3. İletişim Formu */}
-      <section className="w-full max-w-4xl mt-10">
-        <ContactForm />
-      </section>
+        {/* YÜKLENİYOR DURUMU */}
+        {loading && (
+          <div className="flex justify-center py-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        )}
 
-      {/* 4. UI Kit Vitrini */}
-      <div className="w-full max-w-4xl mt-10">
-        <UIKit />
+        {/* PROJE LİSTESİ */}
+        {!loading && (
+          <>
+            {filtered.length === 0 ? (
+              <p className="text-center text-gray-500 py-20">Eşleşen proje bulunamadı.</p>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filtered.map((project) => (
+                  <Card
+                    key={project.id}
+                    variant="elevated"
+                    title={project.title}
+                    image={project.image}
+                  >
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {project.tech.map((t) => (
+                        <span key={t} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-[10px] px-2 py-0.5 rounded-full font-medium">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex justify-between items-center text-xs text-gray-400 border-t pt-3 dark:border-gray-800">
+                      <span>{project.year}</span>
+                      <span className="capitalize">{project.category}</span>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            )}
+            {/* SONUÇ SAYISI */}
+            <p className="text-sm text-gray-500 mt-8 text-center italic">
+              {projects.length} projeden {filtered.length} tanesi gösteriliyor.
+            </p>
+          </>
+        )}
       </div>
-      
     </div>
-  )
-}
-
-export default App;
+  );
+} 
