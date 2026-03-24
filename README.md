@@ -1,22 +1,25 @@
-# Web Tasarımı ve Programlama - LAB-4: Tailwind CSS Portföy
+# Web Tasarımı ve Programlama - LAB-5: TypeScript & State Yönetimi
 
-Bu proje, önceki laboratuvarlarda oluşturulan semantik HTML iskeletinin, **Tailwind CSS v4** framework'ü ile modern, responsive ve utility-first bir yapıya taşınmasını kapsamaktadır.
+Bu çalışma, projenin görsel arayüzüne dinamik veri mantığı ve tip güvenliği eklenmesini kapsamaktadır. Statik bileşen yapısından, asenkron veri çeken ve "state" (durum) odaklı çalışan modern bir mimariye geçiş yapılmıştır.
 
 ## 🎯 Kazanımlar
-- **Utility-First CSS:** Geleneksel CSS yerine doğrudan HTML içerisinde Tailwind sınıflarının kullanılması (hız ve tutarlılık).
-- **Component Yaklaşımı:** `Button`, `Input`, `Card` ve `Alert` bileşenlerinin varyant bazlı (primary, danger, ghost vb.) tasarımı.
-- **Responsive Tasarım:** `sm:`, `md:`, `lg:` prefixleri ile mobil uyumlu ızgara (grid) yapısı.
-- **Dark Mode:** `dark:` ön eki ile karanlık/aydınlık tema desteği ve dinamik geçiş (toggle).
-- **Erişilebilirlik (A11y):** `aria-describedby`, `role="alert"` ve semantik etiketleme ile yüksek erişilebilirlik standartları.
-- **UI Kit:** Tüm bileşen varyantlarının tek bir sayfada (`UIKit.jsx`) dokümante edilmesi.
+
+- **TypeScript Entegrasyonu:** `interface` ve `type alias` kullanarak veri modellerinin (`Project`, `Category`, `FilterState`) tanımlanması.
+- **Async/Await & Fetch API:** Proje verilerinin harici bir JSON dosyasından asenkron olarak çekilmesi ve işlenmesi.
+- **Hata Yönetimi (Error Handling):** `try/catch/finally` blokları ile ağ hatalarının ve HTTP durum kodlarının yönetimi.
+- **Modern State Mantığı:** Doğrudan DOM manipülasyonu yerine, React'in state mantığı ile UI güncelleme (`UI = f(state)`).
+- **Dinamik Filtreleme & Sıralama:** Arama kutusu, kategori butonları ve yıla/başlığa göre sıralama fonksiyonlarının (helpers) uygulanması.
+- **Modüler Kod Yapısı:** Tipler, servisler ve yardımcı fonksiyonların ayrı dosyalarda organize edilmesi.
 
 ## 🛠️ Teknik Araçlar
-- **Framework:** Vite + React
-- **CSS:** Tailwind CSS v4
-- **Yapılandırma:** `@theme` ve `@custom-variant dark` (CSS tabanlı özelleştirme).
-- **Versiyon Kontrol:** Git (feature/tailwind-ui-kit branch yapısı).
+
+- **Dil:** TypeScript (tip güvenliği için)
+- **Veri Kaynağı:** Local JSON (Mock Data)
+- **React Hooks:** `useState` ve `useEffect`
+- **Utility:** JavaScript Array Methods (`filter`, `sort`, `some`, `includes`)
 
 ## 🚀 Kurulum
 ```bash
 npm install
 npm run dev
+``` 
