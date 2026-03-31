@@ -1,40 +1,45 @@
 # 🌐 Web Tasarımı ve Programlama – Laboratuvar Portföyü
 
-Bu depo, Web Tasarımı ve Programlama dersi kapsamında geliştirilen laboratuvar çalışmalarını içermektedir. Proje, modern web teknolojileri olan **Vite, React ve Tailwind CSS** kullanılarak geliştirilmiştir.
+Bu depo, Web Tasarımı ve Programlama dersi kapsamında geliştirilen laboratuvar çalışmalarını ve **Ara Checkpoint #1** aşamasını içermektedir. Proje; **Vite, React, Tailwind CSS ve TypeScript** mimarisi üzerine kurulmuştur.
 
 ## 👨‍💻 Geliştirici
 
-* **Ad Soyad:** Berat Erol
-* **Öğrenci No:** 235541010
+- **Ad Soyad:** Berat Erol
+- **Öğrenci No:** 235541010
 
 ---
 
-## 📂 Proje Yapısı ve İş Akışı
+## 📂 Proje Yapısı ve Gelişim Süreci
 
-Ders gereklilikleri doğrultusunda bu projede her laboratuvar çalışması, kendi izole edilmiş `feature/` branch'inde (dalında) geliştirilmiştir.
+Her laboratuvar çalışması, modern yazılım standartlarına uygun olarak ayrı `feature/` branch'lerinde geliştirilmiştir.
 
-### 🧪 Laboratuvar Dalları (Branch'ler)
+### 🧪 Laboratuvar ve Checkpoint Dalları
 
-* `feature/semantic-portfolio`: **LAB-1** – Semantik HTML yapısının kurulması.
-* `feature/personalize-ui`: **LAB-2** – Kullanıcı arayüzünün kişiselleştirilmesi.
-* `feature/responsive-layout`: **LAB-3** – Mobile-first, Grid/Flexbox ve responsive tasarım.
-* `feature/tailwind-ui-kit`: **LAB-4** – Tailwind CSS v4 entegrasyonu, component mimarisi ve dark mode.
-* `feature/typescript-projects`: **LAB-5** – TypeScript entegrasyonu, Async/Fetch API ve State yönetimi.
+| Branch | Laboratuvar | Konu |
+|--------|-------------|------|
+| `feature/semantic-portfolio` | **LAB-1** | Semantik HTML yapısı |
+| `feature/personalize-ui` | **LAB-2** | Kullanıcı arayüzü kişiselleştirme |
+| `feature/responsive-layout` | **LAB-3** | Mobile-first ve Grid tasarımı |
+| `feature/tailwind-ui-kit` | **LAB-4** | Tailwind CSS v4 ve bileşen mimarisi |
+| `feature/typescript-projects` | **LAB-5** | TypeScript, Fetch API ve State yönetimi |
+| `feature/checkpoint-1` | **LAB-6** | **Ara Checkpoint #1**: Component mimarisi, `useMemo` optimizasyonu ve Controlled Forms |
 
 ---
 
-## 🛠 Kullanılan Teknolojiler
+## 🛠️ Teknik Yetkinlikler (LAB-6 Sonrası)
 
-* **React 18** (Bileşen tabanlı mimari)
-* **TypeScript** (Tip güvenliği ve veri modelleme)
-* **Tailwind CSS v4** (Utility-first CSS yaklaşımı)
-* **Vite** (Hızlı geliştirme ve derleme ortamı)
+- **Component Based UI:** Uygulamanın yönetilebilir küçük parçalara bölünmesi.
+- **Type Safety:** Tüm veri modellerinin ve propların TypeScript ile tanımlanması.
+- **Performance:** `useMemo` ile filtreleme işlemlerinin optimize edilmesi.
+- **User Interaction:** Doğrulama (validation) mekanizmalı kontrollü form yapıları.
 
-## ⚙️ Kurulum ve Çalıştırma
+---
+
+## ⚙️ Kurulum
 
 ```bash
-# Bağımlılıkları yükleyin
 npm install
-
-# Geliştirme sunucusunu başlatın
 npm run dev
+```
+
+> **Not:** En güncel çalışma ve uygulama demosu `feature/checkpoint-1` dalında incelenebilir.
