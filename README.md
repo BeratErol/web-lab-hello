@@ -2,10 +2,14 @@
 
 Bu depo, Web Tasarımı ve Programlama dersi kapsamında geliştirilen laboratuvar çalışmalarını ve **Ara Checkpoint #1** aşamasını içermektedir. Proje; **Vite, React, Tailwind CSS ve TypeScript** mimarisi üzerine kurulmuştur.
 
+---
+
 ## 👨‍💻 Geliştirici
 
-- **Ad Soyad:** Berat Erol
-- **Öğrenci No:** 235541010
+| Alan | Bilgi |
+|------|-------|
+| Ad Soyad | Berat Erol |
+| Öğrenci No | 235541010 |
 
 ---
 
@@ -17,12 +21,12 @@ Her laboratuvar çalışması, modern yazılım standartlarına uygun olarak ayr
 
 | Branch | Laboratuvar | Konu |
 |--------|-------------|------|
-| `feature/semantic-portfolio` | **LAB-1** | Semantik HTML yapısı |
-| `feature/personalize-ui` | **LAB-2** | Kullanıcı arayüzü kişiselleştirme |
-| `feature/responsive-layout` | **LAB-3** | Mobile-first ve Grid tasarımı |
-| `feature/tailwind-ui-kit` | **LAB-4** | Tailwind CSS v4 ve bileşen mimarisi |
-| `feature/typescript-projects` | **LAB-5** | TypeScript, Fetch API ve State yönetimi |
-| `feature/checkpoint-1` | **LAB-6** | **Ara Checkpoint #1**: Component mimarisi, `useMemo` optimizasyonu ve Controlled Forms |
+| `feature/semantic-portfolio` | LAB-1 | Semantik HTML yapısı |
+| `feature/personalize-ui` | LAB-2 | Kullanıcı arayüzü kişiselleştirme |
+| `feature/responsive-layout` | LAB-3 | Mobile-first ve Grid tasarımı |
+| `feature/tailwind-ui-kit` | LAB-4 | Tailwind CSS v4 ve bileşen mimarisi |
+| `feature/typescript-projects` | LAB-5 | TypeScript, Fetch API ve State yönetimi |
+| `feature/checkpoint-1` | LAB-6 | **Ara Checkpoint #1**: Component mimarisi, `useMemo` optimizasyonu ve Controlled Forms |
 
 ---
 
@@ -38,7 +42,10 @@ Her laboratuvar çalışması, modern yazılım standartlarına uygun olarak ayr
 ## ⚙️ Kurulum
 
 ```bash
+# Bağımlılıkları yükleyin
 npm install
+
+# Geliştirme sunucusunu başlatın
 npm run dev
 ```
 
