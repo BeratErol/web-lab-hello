@@ -1,36 +1,45 @@
-# Web Tasarımı ve Programlama - LAB-6: React Bileşen Mimarisi & Ara Checkpoint #1
+# 🌐 Web Tasarımı ve Programlama – Laboratuvar Portföyü
 
-Bu çalışma, projenin modüler bir yapıya dönüştürülmesini, bileşenler arası veri aktarımını (props) ve kullanıcı etkileşimlerinin kontrollü form yapılarıyla yönetilmesini kapsamaktadır. Ayrıca, projenin ilk büyük kontrol noktası olan **Ara Checkpoint #1** gereksinimleri tamamlanmıştır.
+Bu depo, Web Tasarımı ve Programlama dersi kapsamında geliştirilen laboratuvar çalışmalarını ve **Ara Checkpoint #1** aşamasını içermektedir. Proje; **Vite, React, Tailwind CSS ve TypeScript** mimarisi üzerine kurulmuştur.
 
-## 🎯 Kazanımlar
+---
 
-- **Bileşen (Component) Mimarisi:** UI'ın bağımsız, yeniden kullanılabilir ve test edilebilir parçalara (`Header`, `Hero`, `ProjectList`, `ContactForm`) bölünmesi.
-- **Props ile Veri Aktarımı:** Verilerin ebeveyn bileşenden alt bileşenlere güvenli bir şekilde aktarılması ve TypeScript ile prop tiplerinin tanımlanması.
-- **useState ile Durum Yönetimi:** Bileşen düzeyinde durumların oluşturulması, güncellenmesi ve asenkron state değişimlerinin yönetilmesi.
-- **useMemo ile Performans Optimizasyonu:** Filtreleme ve sıralama gibi maliyetli hesaplamaların önbelleğe alınarak performansın artırılması.
-- **Kontrollü Formlar (Controlled Forms):** Form elemanlarının React state ile kontrol edilmesi, anlık veri doğrulaması (validation) ve gönderim durumlarının yönetimi.
-- **Liste Render ve Key Kavramı:** Dizi verilerinin `.map()` ile dinamik olarak listelenmesi ve `key` prop'u ile verimli DOM güncellemelerinin sağlanması.
+## 👨‍💻 Geliştirici
 
-## 🛠️ Teknik Araçlar
+| Alan | Bilgi |
+|------|-------|
+| Ad Soyad | Berat Erol |
+| Öğrenci No | 235541010 |
 
-- **Framework:** React 18 & Vite
-- **Dil:** TypeScript (Interface ve Type tanımlamalarıyla tam tip güvenliği)
-- **Styling:** Tailwind CSS v4 (Responsive Tasarım)
-- **Hooks:** `useState`, `useEffect`, `useMemo`
+---
 
-## 📂 Proje Yapısı
+## 📂 Proje Yapısı ve Gelişim Süreci
 
-Laboratuvar standartlarına uygun olarak geliştirilen klasör hiyerarşisi:
+Her laboratuvar çalışması, modern yazılım standartlarına uygun olarak ayrı `feature/` branch'lerinde geliştirilmiştir.
 
-- `src/components/layout/`: Ortak yerleşim bileşenleri (`Header`, `Footer`).
-- `src/components/sections/`: Sayfa bölümleri (`Hero`, `About`, `Skills`, `ProjectList`).
-- `src/components/ui/`: Temel arayüz elemanları (`Button`, `Card`, `Input`, `Alert`).
-- `src/components/forms/`: Form bileşenleri (`ContactForm`, `ProjectFilter`).
-- `src/types/`: TypeScript model tanımlamaları.
-- `src/services/`: Veri çekme servisleri.
-- `src/utils/`: Yardımcı fonksiyonlar (Filtreleme ve Sıralama).
+### 🧪 Laboratuvar ve Checkpoint Dalları
 
-## 🚀 Kurulum
+| Branch | Laboratuvar | Konu |
+|--------|-------------|------|
+| `feature/semantic-portfolio` | LAB-1 | Semantik HTML yapısı |
+| `feature/personalize-ui` | LAB-2 | Kullanıcı arayüzü kişiselleştirme |
+| `feature/responsive-layout` | LAB-3 | Mobile-first ve Grid tasarımı |
+| `feature/tailwind-ui-kit` | LAB-4 | Tailwind CSS v4 ve bileşen mimarisi |
+| `feature/typescript-projects` | LAB-5 | TypeScript, Fetch API ve State yönetimi |
+| `feature/checkpoint-1` | LAB-6 | **Ara Checkpoint #1**: Component mimarisi, `useMemo` optimizasyonu ve Controlled Forms |
+
+---
+
+## 🛠️ Teknik Yetkinlikler (LAB-6 Sonrası)
+
+- **Component Based UI:** Uygulamanın yönetilebilir küçük parçalara bölünmesi.
+- **Type Safety:** Tüm veri modellerinin ve propların TypeScript ile tanımlanması.
+- **Performance:** `useMemo` ile filtreleme işlemlerinin optimize edilmesi.
+- **User Interaction:** Doğrulama (validation) mekanizmalı kontrollü form yapıları.
+
+---
+
+## ⚙️ Kurulum
 
 ```bash
 # Bağımlılıkları yükleyin
@@ -40,8 +49,4 @@ npm install
 npm run dev
 ```
 
----
-
-## 📋 Ara Checkpoint #1 Notu
-
-Bu branch (`feature/checkpoint-1`), projenin ilk 6 haftalık sürecini kapsayan tüm teknik gereksinimleri (Responsive tasarım, asenkron veri çekme, dinamik filtreleme ve form doğrulaması) içermektedir.
+> **Not:** En güncel çalışma ve uygulama demosu `feature/checkpoint-1` dalında incelenebilir.
